@@ -1,9 +1,11 @@
+import Footer from "./Components/Footer";
 import Nav from "./Components/Nav";
 
 const App = () => {
   return (
-      <div className="bg-slate-900">
+      <div className="bg-white">
         <Nav/>
+        <Footer/>
       </div>
   );
 };
