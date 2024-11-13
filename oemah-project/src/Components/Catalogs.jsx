@@ -27,31 +27,31 @@ const Catalog = () => {
 
     return (
         <div>
-            <div class="bg-[url('./images/header.png')] bg-cover bg-center h-48 flex items-center justify-center font-sans">
-                <h1 class="text-3xl font-bold text-black">Catalog</h1>
+            <div className="bg-[url('./images/header.png')] bg-cover bg-center h-48 flex items-center justify-center font-sans">
+                <h1 className="text-3xl font-bold text-black">Catalog</h1>
             </div>
-            <div class="bg-customCream py-4 px-4 md:px-16 lg:px-32">
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center space-x-4">
-                        <button class="flex items-center space-x-2">
+            <div className="bg-customCream py-4 px-4 md:px-16 lg:px-32">
+                <div className="flex justify-between items-center">
+                    <div className="flex items-center space-x-4">
+                        <button className="flex items-center space-x-2">
                             <IoFilterOutline className="text-xl" />
                             <span>Filter</span>
                         </button>
                         <TbLayoutGridFilled className="text-xl" />
-                        <div class="flex items-center space-x-6">
+                        <div className="flex items-center space-x-6">
                             <BsViewList className="text-xl" />
-                            <p class="text-sm">Showing 1–16 of 250 results</p>
+                            <p className="text-sm">Showing 1–16 of 250 results</p>
                         </div>
                     </div>
-                    <div class="flex items-center space-x-2 text-sm">
-                        <label class="">Show</label>
-                        <select class="bg-white border border-gray-300 rounded-md px-2 py-1">
+                    <div className="flex items-center space-x-2 text-sm">
+                        <label className="">Show</label>
+                        <select className="bg-white border border-gray-300 rounded-md px-2 py-1">
                             <option>16</option>
                             <option>32</option>
                             <option>48</option>
                         </select>
-                        <label class="">Sort by</label>
-                        <select class="bg-white border border-gray-300 rounded-md px-2 py-1">
+                        <label className="">Sort by</label>
+                        <select className="bg-white border border-gray-300 rounded-md px-2 py-1">
                             <option>Default</option>
                             <option>Popularity</option>
                             <option>Rating</option>
@@ -60,50 +60,50 @@ const Catalog = () => {
                     </div>
                 </div>
             </div>
-            <div class="flex flex-wrap gap-2 py-3 px-20">
-                <button class="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Skandinavia</button>
-                <button class="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Minimalis</button>
-                <button class="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Industrial</button>
-                <button class="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Modern</button>
-                <button class="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Bohemian</button>
-                <button class="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Rustic</button>
-                <button class="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Mid-Century Mod</button>
+            <div className="flex flex-wrap gap-2 py-3 px-20">
+                <button className="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Skandinavia</button>
+                <button className="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Minimalis</button>
+                <button className="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Industrial</button>
+                <button className="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Modern</button>
+                <button className="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Bohemian</button>
+                <button className="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Rustic</button>
+                <button className="bg-customCream text-gray-800 py-2 px-4 rounded-full shadow-sm hover:bg-gray-100 text-sm">Mid-Century Mod</button>
             </div>
-            <div class="py-8 px-10 md:px-24 lg:px-32 font-sans">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="py-8 px-10 md:px-24 lg:px-32 font-sans">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {products.map((product) => (
                         <div key={product.id} className="relative group">
                             <img src={product.image} alt={product.name} className="w-full h-64 object-cover rounded-md shadow-md" />
-                            <div class="absolute inset-0 bg-gray-800 bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-                                <button class="mb-2 px-4 py-2 bg-white text-black font-semibold rounded-md hover:text-customBrown">Chat Now</button>
-                                <div class="flex space-x-3 py-2 text-white text-xs font-small">
-                                    <button class="flex items-center hover:text-customBrown">
+                            <div className="absolute inset-0 bg-gray-800 bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
+                                <button className="mb-2 px-4 py-2 bg-white text-black font-semibold rounded-md hover:text-customBrown">Chat Now</button>
+                                <div className="flex space-x-3 py-2 text-white text-xs font-small">
+                                    <button className="flex items-center hover:text-customBrown">
                                         <IoShareSocialSharp className="text-lg px-0.5" />
                                         <span>Share</span>
                                     </button>
-                                    <button class="flex items-center hover:text-customBrown">
+                                    <button className="flex items-center hover:text-customBrown">
                                         <MdCompareArrows className="text-lg px-0.5" />
                                         <span>Compare</span>
                                     </button>
-                                    <button class="flex items-center hover:text-customBrown">
+                                    <button className="flex items-center hover:text-customBrown">
                                         <FaRegHeart className="text-lg px-0.5" />
                                         <span>Like</span>
                                     </button>
                                 </div>
                             </div>
-                            <div class="mt-4">
-                                <h3 class="font-semibold text-lg text-gray-800">{product.name}</h3>
-                                <p class="text-sm text-gray-500">{product.category}</p>
-                                <p class="text-lg font-semibold text-gray-800">{product.price}</p>
+                            <div className="mt-4">
+                                <h3 className="font-semibold text-lg text-gray-800">{product.name}</h3>
+                                <p className="text-sm text-gray-500">{product.category}</p>
+                                <p className="text-lg font-semibold text-gray-800">{product.price}</p>
                             </div>
                         </div>
                     ))}
                 </div>
-                <div class="flex justify-center space-x-2 mt-8">
-                    <button class="w-10 h-10 bg-customBrown text-white font-semibold rounded-full hover:bg-yellow-600">1</button>
-                    <button class="w-10 h-10 bg-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-400">2</button>
-                    <button class="w-10 h-10 bg-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-400">3</button>
-                    <button class="w-20 h-10 bg-customBrown text-white font-semibold rounded-full hover:bg-yellow-600">Next</button>
+                <div className="flex justify-center space-x-2 mt-8">
+                    <button className="w-10 h-10 bg-customBrown text-white font-semibold rounded-full hover:bg-yellow-600">1</button>
+                    <button className="w-10 h-10 bg-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-400">2</button>
+                    <button className="w-10 h-10 bg-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-400">3</button>
+                    <button className="w-20 h-10 bg-customBrown text-white font-semibold rounded-full hover:bg-yellow-600">Next</button>
                 </div>
             </div>
         </div>

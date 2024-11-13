@@ -1,12 +1,23 @@
-import Catalog from "./Components/Catalog";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Catalog from './Components/Catalogs';
 import Footer from "./Components/Footer";
 import Nav from "./Components/Nav";
+import About from './Components/About';
+import Contact from './Components/Contact';
+import Payment from './Components/Payment';
 
 function App() {
   return (
       <div className="bg-white">
         <Nav/>
-        <Catalog/>
+        <Routes>
+        <Route path="/catalog" element={<Catalog />} />  
+          <Route path="/about" element={<About />} />  
+          <Route path="/contact" element={<Contact />} />  
+          <Route path="/payment" element={<Payment />} />  
+
+        </Routes>        
         <Footer/>
       </div>
   );

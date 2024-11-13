@@ -3,23 +3,23 @@ import { FaUserAlt, FaRegHeart } from "react-icons/fa";
 import { IoChatbubbleEllipsesOutline, IoSearch } from "react-icons/io5";
 
 const Nav = () => {
-    // const content = (
-    //     <>
-    //         <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-slate-900 transition">
-    //             <ul className="text-center text-xl p-20">
-    //                 <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-    //                     <Link to="About">About</Link>
-    //                 </li>
-    //                 <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-    //                     <Link to="Catalog">Catalog</Link>
-    //                 </li>
-    //                 <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-    //                     <Link to="Contacts">Contact</Link>
-    //                 </li>
-    //             </ul>
-    //         </div>
-    //     </>
-    // );
+    const content = (
+        <>
+            <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-slate-900 transition">
+                <ul className="text-center text-xl p-20">
+                    <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+                        <Link to="/catalog">Catalog</Link>
+                    </li>
+                    <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+                        <Link to="/contact">Contact</Link>
+                    </li>
+                </ul>
+            </div>
+        </>
+    );
     
     return (
         <nav>
@@ -31,14 +31,17 @@ const Nav = () => {
                 <div className="lg:flex md:flex lg:flex-1 items-center justify-center font-normal hidden">
                     <div className="flex-10">
                         <ul className="flex gap-8 text-[18px]">
-                                <Link to="About">
-                                <li className="border border-transparent hover:bg-customBrown hover:border-customBrown transition rounded-lg p-1">About</li>
-                                </Link>
-                                <Link to="Catalog">
+                                <Link to="/catalog">
                                 <li className="border border-transparent hover:bg-customBrown hover:border-customBrown transition rounded-lg p-1">Catalog</li>
                                 </Link>
-                                <Link to="Contacts">
+                                <Link to="/about">
+                                <li className="border border-transparent hover:bg-customBrown hover:border-customBrown transition rounded-lg p-1">About</li>
+                                </Link>
+                                <Link to="/contact">
                                 <li className="border border-transparent hover:bg-customBrown hover:border-customBrown transition rounded-lg p-1">Contact</li>
+                                </Link>
+                                <Link to="/payment">
+                                <li className="border border-transparent hover:bg-customBrown hover:border-customBrown transition rounded-lg p-1">Payment</li>
                                 </Link>
                         </ul>
                     </div>
