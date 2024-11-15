@@ -6,6 +6,7 @@ import Nav from "./Components/Nav";
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Payment from './Components/Payment';
+import Portfolio from './Components/Portfolio';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/about" element={<About />} />  
           <Route path="/contact" element={<Contact />} />  
           <Route path="/payment" element={<Payment />} />  
+          <Route path="/portfolio" element={<Portfolio />} />  
 
         </Routes>        
         <Footer/>
