@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -45,7 +46,12 @@ function Portfolio() {
                         <span className="bg-gray-200 text-gray-800 px-2 py-1 rounded-full ml-2">Industrial</span>
                         <span className="bg-gray-200 text-gray-800 px-2 py-1 rounded-full ml-2">Minimalis</span>
                     </div>
-                    <button className="bg-yellow-600 text-white w-full max-w-2xl py-4 rounded-lg text-lg hover:bg-yellow-700 transition duration-200">Chat Now</button>
+                    {/* <button className="bg-yellow-600 text-white w-full max-w-2xl py-4 rounded-lg text-lg hover:bg-yellow-700 transition duration-200">Chat Now</button> */}
+                    <Link to="/chat">
+                     <button className="bg-yellow-600 text-white w-full max-w-2xl py-4 rounded-lg text-lg hover:bg-yellow-700 transition duration-200">
+                     Chat Now
+                    </button>
+                    </Link>
                     <div className="mt-4">
                         <span className="text-gray-600">Category</span>
                         <div className="flex space-x-2 mt-2">
