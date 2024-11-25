@@ -1,25 +1,14 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Menggunakan react-router-dom untuk navigasi
+import React from 'react';
 
-function Payment() {
-  const [selectedPayment, setSelectedPayment] = useState(null);
-  const navigate = useNavigate();
-
+function DetailPayment() {
   const paymentMethods = [
-    { name: 'BCA Virtual Account', image: './images/bca.jpg', link: '/detail' },
-    { name: 'BNI Virtual Account', image: './images/bni.png', link: '' },
-    { name: 'Mandiri Virtual Account', image: './images/mandiri.png', link: '' },
-    { name: 'BRI Virtual Account', image: './images/bri.png', link: '' },
-    { name: 'Sea Bank', image: './images/seabank.png', link: '' },
-    { name: 'QRIS', image: './images/qr.png', link: '' },
+    { name: 'BCA Virtual Account', image: './images/bca.jpg' },
+    { name: 'BNI Virtual Account', image: './images/bni.png' },
+    { name: 'Mandiri Virtual Account', image: './images/mandiri.png' },
+    { name: 'BRI Virtual Account', image: './images/bri.png' },
+    { name: 'Sea Bank', image: './images/seabank.png' },
+    { name: 'QRIS', image: './images/qr.png' },
   ];
-
-  const handleSelection = (method) => {
-    setSelectedPayment(method.name);
-    if (method.link) {
-      navigate(method.link); // Navigasi ke tautan jika ada
-    }
-  };
 
   return (
     <div>
@@ -43,12 +32,7 @@ function Payment() {
                   ></div>
                   <span className="text-lg">{method.name}</span>
                 </div>
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  className="form-radio h-5 w-5"
-                  onChange={() => handleSelection(method)} // Tambahkan handler
-                />
+                <input type="radio" name="paymentMethod" className="form-radio h-5 w-5" />
               </div>
             ))}
           </div>
@@ -59,17 +43,11 @@ function Payment() {
           <div className="flex items-center justify-between border-b-2 pb-4 mb-4">
             <div className="flex items-center gap-4">
               <div className="w-24 h-24 bg-gray-200">
-                <img
-                  src="./images/catalog14.jpg"
-                  alt="Asgaard Sofa"
-                  className="w-full h-full object-cover"
-                />
+              <img src="./images/catalog14.jpg" alt="Asgaard Sofa" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Asgaard sofa</h3>
-                <p>
-                  1 x <span className="text-yellow-600 font-semibold">Rp 250.000,00</span>
-                </p>
+                <p>1 x <span className="text-yellow-600 font-semibold">Rp 250.000,00</span></p>
               </div>
             </div>
           </div>
@@ -79,14 +57,39 @@ function Payment() {
             <span className="text-yellow-600 text-lg font-semibold">Rp 250.000,00</span>
           </div>
 
-          <button className="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700">
-            Proceed to Payment
+          <div className="p-4 bg-white rounded-lg shadow-lg">
+          <div className="flex items-center justify-between text-red-600 mb-4">
+  <h2 className="text-lg font-semibold">Payment Before</h2>
+  <div className="text-xl font-bold">10:00</div>
+</div>
+      
+      <div className="p-4 border rounded-lg flex flex-col gap-2">
+        <div className="flex items-center gap-4">
+          <img
+            src="./images/bca.jpg"
+            alt="BCA Logo"
+            className="w-12 h-12 object-cover rounded"
+          />
+          <div>
+            <h3 className="text-md font-bold">BCA Virtual Account</h3>
+            <p className="text-gray-600 text-sm">No. Rek/Virtual Account</p>
+          </div>
+        </div>
+        <div className="flex justify-between items-center text-blue-600 font-semibold text-lg">
+          <span>8806 082 22875 38201</span>
+          <button
+            onClick={() => navigator.clipboard.writeText("88060822287538201")}
+            className="text-green-500 font-medium hover:underline"
+          >
+            Copy
           </button>
-          
+        </div>
+      </div>
+    </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default Payment;
+export default DetailPayment;

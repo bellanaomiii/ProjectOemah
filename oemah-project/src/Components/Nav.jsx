@@ -40,9 +40,6 @@ const Nav = () => {
                                 <Link to="/contact">
                                 <li className="border border-transparent hover:bg-customBrown hover:border-customBrown transition rounded-lg p-1">Contact</li>
                                 </Link>
-                                <Link to="/payment">
-                                <li className="border border-transparent hover:bg-customBrown hover:border-customBrown transition rounded-lg p-1">Payment</li>
-                                </Link>
                         </ul>
                     </div>
                 </div>

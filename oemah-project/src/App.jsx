@@ -8,6 +8,7 @@ import Contact from './Components/Contact';
 import Payment from './Components/Payment';
 import Portfolio from './Components/Portfolio';
 import Chat from './Components/Chat';
+import DetailPayment from './Components/DetailPayment';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path="/payment" element={<Payment />} />  
           <Route path="/portfolio" element={<Portfolio />} />  
           <Route path="/chat" element={<Chat />} />  
-
+          <Route path='/detail' element={<DetailPayment />} />
+          
         </Routes>        
         <Footer/>
       </div>
