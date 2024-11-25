@@ -93,13 +93,18 @@ function Review() {
             {/* Description and Reviews Section */}
             <div className="border-t mt-8 pt-4">
                 <div className="flex space-x-8 mb-4 justify-center">
-                    <div className="text-gray-600 text-center text-xl cursor-pointer hover:text-gray-800">Description</div>
-                    <div
-                        className="text-gray-800 font-medium text-center text-xl">
+                    <a
+                        href="/portfolio"
+                        className="text-gray-600 text-center text-xl cursor-pointer hover:text-gray-800"
+                    >
+                        Description
+                    </a>
+                    <div className="text-gray-800 font-medium text-center text-xl">
                         Review
                     </div>
                 </div>
             </div>
+
 
             <div className="max-w-4xl mx-auto p-4">
                 {/* Header Section */}

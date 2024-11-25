@@ -67,7 +67,7 @@ function Portfolio() {
                     <div className="text-gray-800 font-medium text-center text-xl">Description</div>
                     <div className="text-gray-600 text-center text-xl">
                         <Link to="/review" className="hover:underline">
-                            Reviews [20]
+                            Reviews
                         </Link>
                     </div>
                 </div>
