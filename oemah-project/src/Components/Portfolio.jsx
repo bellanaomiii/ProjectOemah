@@ -12,17 +12,17 @@ function Portfolio() {
             </div>
             <div className="flex">
                 <div className="w-1/2">
-                <div className="flex flex-col items-center">
-                    <div className="flex">
-                        <div className="flex flex-col space-y-2 mr-4">
-                            <img src="./images/catalog3.jpg" alt="Thumbnail 1" className="w-20 h-20 object-cover rounded-lg" />
-                            <img src="./images/catalog4.jpg" alt="Thumbnail 2" className="w-20 h-20 object-cover rounded-lg" />
-                            <img src="./images/catalog5.jpg" alt="Thumbnail 3" className="w-20 h-20 object-cover rounded-lg" />
-                            <img src="./images/catalog7.jpg" alt="Thumbnail 4" className="w-20 h-20 object-cover rounded-lg" />
+                    <div className="flex flex-col items-center">
+                        <div className="flex">
+                            <div className="flex flex-col space-y-2 mr-4">
+                                <img src="./images/catalog3.jpg" alt="Thumbnail 1" className="w-20 h-20 object-cover rounded-lg" />
+                                <img src="./images/catalog4.jpg" alt="Thumbnail 2" className="w-20 h-20 object-cover rounded-lg" />
+                                <img src="./images/catalog5.jpg" alt="Thumbnail 3" className="w-20 h-20 object-cover rounded-lg" />
+                                <img src="./images/catalog7.jpg" alt="Thumbnail 4" className="w-20 h-20 object-cover rounded-lg" />
+                            </div>
+                            <img src="./images/catalog2.jpg" alt="Main product image" className="w-96 h-96 object-cover rounded-lg" />
                         </div>
-                        <img src="./images/catalog2.jpg" alt="Main product image" className="w-96 h-96 object-cover rounded-lg" />
                     </div>
-                </div>
 
                 </div>
                 <div className="w-1/2 pl-8">
@@ -48,9 +48,9 @@ function Portfolio() {
                     </div>
                     {/* <button className="bg-yellow-600 text-white w-full max-w-2xl py-4 rounded-lg text-lg hover:bg-yellow-700 transition duration-200">Chat Now</button> */}
                     <Link to="/chat">
-                     <button className="bg-yellow-600 text-white w-full max-w-2xl py-4 rounded-lg text-lg hover:bg-yellow-700 transition duration-200">
-                     Chat Now
-                    </button>
+                        <button className="bg-yellow-600 text-white w-full max-w-2xl py-4 rounded-lg text-lg hover:bg-yellow-700 transition duration-200">
+                            Chat Now
+                        </button>
                     </Link>
                     <div className="mt-4">
                         <span className="text-gray-600">Category</span>
@@ -65,7 +65,11 @@ function Portfolio() {
             <div className="border-t mt-8 pt-4">
                 <div className="flex space-x-8 mb-4 justify-center">
                     <div className="text-gray-800 font-medium text-center text-xl">Description</div>
-                    <div className="text-gray-600 text-center text-xl">Reviews [20]</div>
+                    <div className="text-gray-600 text-center text-xl">
+                        <Link to="/review" className="hover:underline">
+                            Reviews [20]
+                        </Link>
+                    </div>
                 </div>
                 <p className="text-gray-600 mb-4 text-center text-lg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

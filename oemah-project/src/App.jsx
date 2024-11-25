@@ -9,23 +9,24 @@ import Payment from './Components/Payment';
 import Portfolio from './Components/Portfolio';
 import Chat from './Components/Chat';
 import DetailPayment from './Components/DetailPayment';
-
+import Review from './Components/Review';
 function App() {
   return (
-      <div className="bg-white">
-        <Nav/>
-        <Routes>
-        <Route path="/catalog" element={<Catalog />} />  
-          <Route path="/about" element={<About />} />  
-          <Route path="/contact" element={<Contact />} />  
-          <Route path="/payment" element={<Payment />} />  
-          <Route path="/portfolio" element={<Portfolio />} />  
-          <Route path="/chat" element={<Chat />} />  
-          <Route path='/detail' element={<DetailPayment />} />
-          
-        </Routes>        
-        <Footer/>
-      </div>
+    <div className="bg-white">
+      <Nav />
+      <Routes>
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path='/detail' element={<DetailPayment />} />
+        <Route path='/review' element={<Review />} />
+
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
