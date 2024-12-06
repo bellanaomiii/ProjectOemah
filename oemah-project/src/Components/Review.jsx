@@ -1,6 +1,7 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { Link } from "react-router-dom";
 
 function Review() {
     return (
@@ -68,9 +69,11 @@ function Review() {
                     </div>
 
                     {/* Chat Button */}
-                    <button className="bg-yellow-600 text-white w-full max-w-2xl py-4 rounded-lg text-lg hover:bg-yellow-700 transition duration-200">
-                        Chat Now
-                    </button>
+                    <Link to="/chat">
+                        <button className="bg-yellow-600 text-white w-full max-w-2xl py-4 rounded-lg text-lg hover:bg-yellow-700 transition duration-200">
+                            Chat Now
+                        </button>
+                    </Link>
 
                     {/* Categories */}
                     <div className="mt-4">

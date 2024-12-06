@@ -80,28 +80,42 @@ const Catalog = () => {
             <div className="py-8 px-10 md:px-24 lg:px-32 font-sans">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {products.map((product) => (
-                        <div
-                            key={product.id}
-                            className="relative group cursor-pointer"
-                            onClick={() => navigate('/portfolio')}
-                        >
-                            <img src={product.image} alt={product.name} className="w-full h-64 object-cover rounded-md shadow-md" />
-                            <div className="absolute inset-0 bg-gray-800 bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-                                <button
-                                    className="mb-2 px-4 py-2 bg-white text-black font-semibold rounded-md hover:text-customBrown"
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        navigate('/portfolio');
-                                    }}
-                                >
-                                    Chat Now
-                                </button>
-                                <div className="flex space-x-3 py-2 text-white text-xs font-small">
-                                    <button className="flex items-center hover:text-customBrown"><IoShareSocialSharp className="text-lg px-0.5" /><span>Share</span></button>
-                                    <button className="flex items-center hover:text-customBrown"><MdCompareArrows className="text-lg px-0.5" /><span>Compare</span></button>
-                                    <button className="flex items-center hover:text-customBrown"><FaRegHeart className="text-lg px-0.5" /><span>Like</span></button>
+                        <div key={product.id} className="relative">
+                            {/* Image Wrapper */}
+                            <div className="relative group cursor-pointer">
+                                <img
+                                    src={product.image}
+                                    alt={product.name}
+                                    className="w-full h-64 object-cover rounded-md shadow-md"
+                                />
+                                {/* Hover Effect */}
+                                <div className="absolute inset-0 bg-gray-800 bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
+                                    <button
+                                        className="mb-2 px-4 py-2 bg-white text-black font-semibold rounded-md hover:text-customBrown"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            navigate('/portfolio');
+                                        }}
+                                    >
+                                        Chat Now
+                                    </button>
+                                    <div className="flex space-x-3 py-2 text-white text-xs font-small">
+                                        <button className="flex items-center hover:text-customBrown">
+                                            <IoShareSocialSharp className="text-lg px-0.5" />
+                                            <span>Share</span>
+                                        </button>
+                                        <button className="flex items-center hover:text-customBrown">
+                                            <MdCompareArrows className="text-lg px-0.5" />
+                                            <span>Compare</span>
+                                        </button>
+                                        <button className="flex items-center hover:text-customBrown">
+                                            <FaRegHeart className="text-lg px-0.5" />
+                                            <span>Like</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
+                            {/* Text Information */}
                             <div className="mt-4">
                                 <h3 className="font-semibold text-lg text-gray-800">{product.name}</h3>
                                 <p className="text-sm text-gray-500">{product.category}</p>
